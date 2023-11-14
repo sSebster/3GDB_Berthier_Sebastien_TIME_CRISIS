@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6980464542851993835}
   - component: {fileID: 7305109825589942873}
   - component: {fileID: 1377323136200540804}
+  - component: {fileID: 4652026250442309587}
+  - component: {fileID: -8159201272894810833}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -147,3 +149,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7585604138824830809, guid: 5be771918b0d8bc40b8d067369f0bd27, type: 3}
+  particuleDeath: {fileID: 8997973005800648244, guid: 36c579652d2d9d244a8a299e39a16d45, type: 3}
+--- !u!114 &4652026250442309587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964636914210219000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453e0c157c1d81245a0d851894d22174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventTriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8159201272894810833}
+        m_TargetAssemblyTypeName: Destroy, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1377323136200540804}
+        m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        m_MethodName: ParticuleDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  EventTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  onlyOnce: 0
+  hasPhysics: 0
+  reactToTags:
+  - Bullet
+--- !u!114 &-8159201272894810833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3964636914210219000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbade14ea7cccf84a99645b591cd03d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

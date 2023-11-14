@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public GameObject bulletPrefab;
 
+    public GameObject particuleDeath;
+
     void Start()
     {
         Invoke("Shoot", Random.Range(1, 10));
@@ -18,5 +20,10 @@ public class Enemy : MonoBehaviour
         bullet.GetComponent<Rigidbody>().AddForce(dir.normalized * 750);
 
         Invoke("Shoot", Random.Range(1, 10));
+    }
+
+    public void ParticuleDeath()
+    {
+        Instantiate(particuleDeath, transform.position, Quaternion.identity);
     }
 }
